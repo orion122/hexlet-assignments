@@ -11,18 +11,13 @@ class App {
             return result;
         }
 
-        List<String> words1 = new ArrayList<>(Arrays.asList(sentence.split(" ")));
-        List<String> words2 = new ArrayList<>(Arrays.asList(sentence.split(" ")));
+        List<String> words = new ArrayList<>(Arrays.asList(sentence.split(" ")));
 
-        for (String w1: words1) {
-            if (words2.contains(w1)) {
-                words2.remove(w1);
-                result.put(w1, result.getOrDefault(w1, 0) + 1);
-            }
+        for (String w: words) {
+            int n = result.getOrDefault(w, 0);
+            n++;
+            result.put(w, n);
         }
-
-//        System.out.println(sentence);
-//        System.out.println(result);
 
         return result;
     }
