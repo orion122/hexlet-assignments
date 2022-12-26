@@ -19,9 +19,9 @@ class Flat implements Home {
 
     @Override
     public int compareTo(Home another) {
-        if (getArea() > another.getArea()) {
+        if (this.getArea() > another.getArea()) {
             return 1;
-        } else if (getArea() == another.getArea()) {
+        } else if (this.getArea() == another.getArea()) {
             return -1;
         }
 
@@ -30,7 +30,7 @@ class Flat implements Home {
 
     @Override
     public String toString() {
-        return "Квартира площадью " +  getArea() + " метров на " + floor + " этаже";
+        return "Квартира площадью " +  this.getArea() + " метров на " + floor + " этаже";
     }
 }
 // END

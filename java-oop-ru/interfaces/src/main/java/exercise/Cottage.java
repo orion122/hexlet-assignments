@@ -7,14 +7,14 @@ class Cottage implements Home {
 
     @Override
     public double getArea() {
-        return area;
+        return this.area;
     }
 
     @Override
     public int compareTo(Home another) {
-        if (getArea() > another.getArea()) {
+        if (this.getArea() > another.getArea()) {
             return 1;
-        } else if (getArea() == another.getArea()) {
+        } else if (this.getArea() == another.getArea()) {
             return -1;
         }
 
@@ -28,7 +28,7 @@ class Cottage implements Home {
 
     @Override
     public String toString() {
-        return floorCount + " этажный коттедж площадью " + area + " метров";
+        return floorCount + " этажный коттедж площадью " + getArea() + " метров";
     }
 }
 // END
