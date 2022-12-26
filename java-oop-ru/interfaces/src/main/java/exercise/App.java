@@ -9,7 +9,7 @@ class App {
     public static List<String> buildApartmentsList(List<Home> homes, int n) {
         return homes.stream()
                 .limit(n)
-                .sorted(Comparator.comparing(Home::getArea))
+                .sorted(Home::compareTo)
                 .map(Home::toString)
                 .collect(Collectors.toList());
     }

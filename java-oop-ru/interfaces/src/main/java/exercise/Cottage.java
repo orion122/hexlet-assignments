@@ -12,13 +12,15 @@ class Cottage implements Home {
 
     @Override
     public int compareTo(Home another) {
-        if (getArea() > another.getArea()) {
+        if (this.getArea() > another.getArea()) {
             return 1;
-        } else if (getArea() == another.getArea()) {
-            return -1;
         }
 
-        return 0;
+        if (this.getArea() == another.getArea()) {
+            return 0;
+        }
+
+        return -1;
     }
 
     public Cottage(double area, int floorCount) {
