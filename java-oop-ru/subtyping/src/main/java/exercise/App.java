@@ -17,7 +17,10 @@ class App {
         }
 
         for (Entry<String, String> e: tmp.entrySet()) {
-            kvStorage.unset(e.getKey());
+            kvStorage.unset(e.getValue());
+        }
+
+        for (Entry<String, String> e: tmp.entrySet()) {
             kvStorage.set(e.getKey(), e.getValue());
         }
     }
